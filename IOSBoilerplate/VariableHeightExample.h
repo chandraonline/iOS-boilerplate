@@ -30,7 +30,7 @@
 
 @interface VariableHeightExample : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) IBOutlet UITableView* table;
-@property (nonatomic, retain) NSArray* results;
+@property (nonatomic, strong) IBOutlet UITableView* table;
+@property (nonatomic, strong) NSArray* results;
 
 @end

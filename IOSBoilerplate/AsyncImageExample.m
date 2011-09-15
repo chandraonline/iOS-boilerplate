@@ -70,7 +70,6 @@
     
     NSURL* _url = [[NSURL alloc] initWithString:@"http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Zaragoza_shel.JPG/266px-Zaragoza_shel.JPG"];
     self.url = _url;
-    [_url release];
     
     UIImage* image = [ImageManager loadImage:url];
     
@@ -89,11 +88,5 @@
 	return YES;
 }
 
-- (void)dealloc {
-    [imageView release];
-    [url release];
-    
-    [super dealloc];
-}
 
 @end

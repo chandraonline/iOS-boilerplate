@@ -33,7 +33,7 @@
 @interface Place : NSObject <MKAnnotation>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *subtitle;
+@property (nonatomic, strong) NSString *titleAnnotation;
+@property (nonatomic, strong) NSString *subtitleAnnotation;
 
 @end

@@ -55,17 +55,11 @@ static UIFont* bold14 = nil;
 {
 	if(self == [AsyncCell class])
 	{
-		system14 = [[UIFont systemFontOfSize:14] retain];
-		bold14 = [[UIFont boldSystemFontOfSize:14] retain];
+		system14 = [UIFont systemFontOfSize:14];
+		bold14 = [UIFont boldSystemFontOfSize:14];
 	}
 }
 
-- (void)dealloc {
-    [info release];
-    [imageURL release];
-    
-    [super dealloc];
-}
 
 - (void) drawContentView:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();
@@ -98,7 +92,6 @@ static UIFont* bold14 = nil;
 	if (image) {
 		NSURL* url = [[NSURL alloc] initWithString:image];
 		self.imageURL = url;
-		[url release];
 	} else {
         self.imageURL = nil;
     }

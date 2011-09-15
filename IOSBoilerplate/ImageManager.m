@@ -45,14 +45,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [pendingImages release];
-    [loadedImages release];
-    [downloadQueue release];
-    [cache release];
-    
-    [super dealloc];
-}
 
 static ImageManager *sharedSingleton;
 
@@ -106,7 +98,6 @@ static ImageManager *sharedSingleton;
     [request setDidFinishSelector:@selector(imageDone:)];
     [request setDidFailSelector:@selector(imageWentWrong:)];
     [downloadQueue addOperation:request];
-    [request release];
     return nil;
 }
 
@@ -161,7 +152,6 @@ static ImageManager *sharedSingleton;
 }
 
 + (void) releaseSingleton {
-    [sharedSingleton release];
 }
 
 

@@ -123,7 +123,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     if (indexPath.section == 0) {
@@ -244,7 +244,6 @@
     
     if (vc) {
         [self.navigationController pushViewController:vc animated:YES];
-        [vc release];
     }
 
 }
@@ -259,11 +258,5 @@
     [super viewDidUnload];
 }
 
-- (void)dealloc
-{
-    [table release];
-    
-    [super dealloc];
-}
 
 @end

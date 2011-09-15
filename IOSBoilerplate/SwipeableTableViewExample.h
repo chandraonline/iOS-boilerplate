@@ -30,6 +30,6 @@
 
 @interface SwipeableTableViewExample : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) IBOutlet UITableView* table;
+@property (nonatomic, strong) IBOutlet UITableView* table;
 
 @end

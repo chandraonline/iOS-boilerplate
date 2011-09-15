@@ -74,13 +74,12 @@
     
     SwipeableCell *cell = (SwipeableCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[SwipeableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[SwipeableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     NSString* text = [NSString stringWithFormat:@"Cell #%d", indexPath.row];
     NSDictionary* info = [[NSDictionary alloc] initWithObjectsAndKeys:text, @"text", nil];
     [cell updateCellInfo:info];
-    [info release];
     
     return cell;
 }
@@ -116,9 +115,5 @@
     return YES;
 }
 
-- (void)dealloc {
-    [table release];
-    [super dealloc];
-}
 
 @end

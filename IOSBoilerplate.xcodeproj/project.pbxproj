@@ -36,17 +36,16 @@
 		09885EC31418F2E600CCE17A /* IOSBoilerplateTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 09885EC21418F2E600CCE17A /* IOSBoilerplateTests.h */; };
 		09885EC51418F2E600CCE17A /* IOSBoilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EC41418F2E600CCE17A /* IOSBoilerplateTests.m */; };
 		09885EE11418F3B700CCE17A /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED01418F3B700CCE17A /* ASIAuthenticationDialog.m */; };
-		09885EE21418F3B700CCE17A /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED31418F3B700CCE17A /* ASIDataCompressor.m */; };
+		09885EE21418F3B700CCE17A /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED31418F3B700CCE17A /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09885EE31418F3B700CCE17A /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED51418F3B700CCE17A /* ASIDataDecompressor.m */; };
 		09885EE41418F3B700CCE17A /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED71418F3B700CCE17A /* ASIDownloadCache.m */; };
-		09885EE51418F3B700CCE17A /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED91418F3B700CCE17A /* ASIFormDataRequest.m */; };
-		09885EE61418F3B700CCE17A /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EDB1418F3B700CCE17A /* ASIHTTPRequest.m */; };
+		09885EE51418F3B700CCE17A /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885ED91418F3B700CCE17A /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09885EE61418F3B700CCE17A /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EDB1418F3B700CCE17A /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09885EE71418F3B700CCE17A /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EDF1418F3B700CCE17A /* ASIInputStream.m */; };
-		09885EEB1418F3DA00CCE17A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EEA1418F3DA00CCE17A /* Reachability.m */; };
+		09885EEB1418F3DA00CCE17A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EEA1418F3DA00CCE17A /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09885EED1418F3F900CCE17A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09885EEC1418F3F900CCE17A /* CFNetwork.framework */; };
 		09885EEF1418F40200CCE17A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09885EEE1418F40200CCE17A /* SystemConfiguration.framework */; };
 		09885EF21418F44200CCE17A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09885EF11418F44200CCE17A /* MobileCoreServices.framework */; };
-		09885EF41418F46700CCE17A /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09885EF31418F46700CCE17A /* libz.1.2.3.dylib */; };
 		09885EF91418F4AB00CCE17A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885EF81418F4AB00CCE17A /* BaseViewController.m */; };
 		09885F381418F73A00CCE17A /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F371418F73A00CCE17A /* ImageManager.m */; };
 		09885F3C1418FC6F00CCE17A /* HTTPHUDExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F3A1418FC6E00CCE17A /* HTTPHUDExample.m */; };
@@ -55,7 +54,7 @@
 		09885F431418FFE000CCE17A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F411418FFE000CCE17A /* SVProgressHUD.m */; };
 		09885F451419009200CCE17A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09885F441419009200CCE17A /* QuartzCore.framework */; };
 		09885F48141901E700CCE17A /* DictionaryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F47141901E700CCE17A /* DictionaryHelper.m */; };
-		09885F4C1419028D00CCE17A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F4B1419028D00CCE17A /* JSONKit.m */; };
+		09885F4C1419028D00CCE17A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F4B1419028D00CCE17A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09885F50141903DA00CCE17A /* AsyncImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F4E141903DA00CCE17A /* AsyncImageExample.m */; };
 		09885F51141903DA00CCE17A /* AsyncImageExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09885F4F141903DA00CCE17A /* AsyncImageExample.xib */; };
 		09885F55141909E600CCE17A /* AsyncCellImagesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 09885F53141909E500CCE17A /* AsyncCellImagesExample.m */; };
@@ -77,6 +76,7 @@
 		09E442D9141F9DD400AD2DAE /* SwipeableTableViewExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E442D7141F9DD400AD2DAE /* SwipeableTableViewExample.m */; };
 		09E442DA141F9DD400AD2DAE /* SwipeableTableViewExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E442D8141F9DD400AD2DAE /* SwipeableTableViewExample.xib */; };
 		09E442DD141F9E3600AD2DAE /* SwipeableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E442DC141F9E3600AD2DAE /* SwipeableCell.m */; };
+		EB493A8A142247DE0086CDE5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB493A89142247DE0086CDE5 /* libz.1.2.5.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +153,6 @@
 		09885EEE1418F40200CCE17A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		09885EF01418F43700CCE17A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		09885EF11418F44200CCE17A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		09885EF31418F46700CCE17A /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		09885EF71418F4AB00CCE17A /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		09885EF81418F4AB00CCE17A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		09885F361418F73A00CCE17A /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
@@ -199,6 +198,7 @@
 		09E442D8141F9DD400AD2DAE /* SwipeableTableViewExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeableTableViewExample.xib; sourceTree = "<group>"; };
 		09E442DB141F9E3600AD2DAE /* SwipeableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeableCell.h; sourceTree = "<group>"; };
 		09E442DC141F9E3600AD2DAE /* SwipeableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeableCell.m; sourceTree = "<group>"; };
+		EB493A89142247DE0086CDE5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,10 +206,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB493A8A142247DE0086CDE5 /* libz.1.2.5.dylib in Frameworks */,
 				09270769141E52BB00E778AE /* CoreLocation.framework in Frameworks */,
 				0927075E141E4C7800E778AE /* MapKit.framework in Frameworks */,
 				09885F451419009200CCE17A /* QuartzCore.framework in Frameworks */,
-				09885EF41418F46700CCE17A /* libz.1.2.3.dylib in Frameworks */,
 				09885EF21418F44200CCE17A /* MobileCoreServices.framework in Frameworks */,
 				09885E991418F2E600CCE17A /* CoreGraphics.framework in Frameworks */,
 				09885EEF1418F40200CCE17A /* SystemConfiguration.framework in Frameworks */,
@@ -236,10 +236,10 @@
 		09885E851418F2E500CCE17A = {
 			isa = PBXGroup;
 			children = (
+				EB493A89142247DE0086CDE5 /* libz.1.2.5.dylib */,
 				09270768141E52BB00E778AE /* CoreLocation.framework */,
 				0927075D141E4C7800E778AE /* MapKit.framework */,
 				09885F441419009200CCE17A /* QuartzCore.framework */,
-				09885EF31418F46700CCE17A /* libz.1.2.3.dylib */,
 				09885EF11418F44200CCE17A /* MobileCoreServices.framework */,
 				09885EF01418F43700CCE17A /* CoreGraphics.framework */,
 				09885EEE1418F40200CCE17A /* SystemConfiguration.framework */,
@@ -504,6 +504,9 @@
 /* Begin PBXProject section */
 		09885E871418F2E500CCE17A /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 09885E8A1418F2E500CCE17A /* Build configuration list for PBXProject "IOSBoilerplate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -718,8 +721,10 @@
 		09885EC91418F2E600CCE17A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOSBoilerplate/IOSBoilerplate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IOSBoilerplate/IOSBoilerplate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,8 +735,10 @@
 		09885ECA1418F2E600CCE17A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOSBoilerplate/IOSBoilerplate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IOSBoilerplate/IOSBoilerplate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

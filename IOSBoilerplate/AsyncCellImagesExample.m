@@ -73,7 +73,7 @@
     
     AsyncCell *cell = (AsyncCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[AsyncCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[AsyncCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     NSDictionary* obj = [results objectAtIndex:indexPath.row];
@@ -137,11 +137,5 @@
 	return YES;
 }
 
-- (void)dealloc {
-    [table release];
-    [results release];
-    
-    [super dealloc];
-}
 
 @end

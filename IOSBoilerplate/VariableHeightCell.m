@@ -53,15 +53,10 @@ static UIFont* system14 = nil;
 {
 	if(self == [VariableHeightCell class])
 	{
-		system14 = [[UIFont systemFontOfSize:14] retain];
+		system14 = [UIFont systemFontOfSize:14];
 	}
 }
 
-- (void)dealloc {
-    [info release];
-    
-    [super dealloc];
-}
 
 - (void) drawContentView:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();

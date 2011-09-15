@@ -31,10 +31,10 @@
 
 @interface DirectionsExample : BaseViewController
 
-@property(nonatomic, retain) id<MKAnnotation> source;
-@property(nonatomic, retain) id<MKAnnotation> destination;
-@property(nonatomic, retain) MKPolyline* routeLine;
-@property (nonatomic, retain) IBOutlet MKMapView* map;
+@property(nonatomic, strong) id<MKAnnotation> source;
+@property(nonatomic, strong) id<MKAnnotation> destination;
+@property(nonatomic, strong) MKPolyline* routeLine;
+@property (nonatomic, strong) IBOutlet MKMapView* map;
 
 - (NSMutableArray *)decodePolyLine:(NSMutableString *)encoded;
 

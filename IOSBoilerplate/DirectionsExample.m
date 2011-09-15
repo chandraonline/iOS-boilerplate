@@ -55,13 +55,13 @@
 		} else {
 			pin.pinColor = MKPinAnnotationColorRed;
 		}
-		return [pin autorelease];
+		return pin;
 	}
 	return nil;
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id )overlay {
-	MKPolylineView* routeLineView = [[[MKPolylineView alloc] initWithPolyline:self.routeLine] autorelease];
+	MKPolylineView* routeLineView = [[MKPolylineView alloc] initWithPolyline:self.routeLine];
 	routeLineView.fillColor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:0.5f];
 	routeLineView.strokeColor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:0.5f];
 	routeLineView.lineWidth = 4;
@@ -132,11 +132,9 @@
 		
 		CLLocation* location = [[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]];
 		[aux addObject:location];
-		[location release];
 	}
 	
 	[self setRoutePoints:aux];
-	[aux release];
 }
 
 - (void)calculateDirections {
@@ -198,7 +196,7 @@
 								  range:NSMakeRange(0, [encoded length])];
 	NSInteger len = [encoded length];
 	NSInteger index = 0;
-	NSMutableArray *array = [[[NSMutableArray alloc] init] autorelease];
+	NSMutableArray *array = [[NSMutableArray alloc] init];
 	NSInteger lat=0;
 	NSInteger lng=0;
 	while (index < len) {
@@ -221,11 +219,11 @@
 		} while (b >= 0x20);
 		NSInteger dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
 		lng += dlng;
-		NSNumber *latitude = [[[NSNumber alloc] initWithFloat:lat * 1e-5] autorelease];
-		NSNumber *longitude = [[[NSNumber alloc] initWithFloat:lng * 1e-5] autorelease];
+		NSNumber *latitude = [[NSNumber alloc] initWithFloat:lat * 1e-5];
+		NSNumber *longitude = [[NSNumber alloc] initWithFloat:lng * 1e-5];
 		// printf("[%f,", [latitude doubleValue]);
 		// printf("%f]", [longitude doubleValue]);
-		CLLocation *loc = [[[CLLocation alloc] initWithLatitude:[latitude floatValue] longitude:[longitude floatValue]] autorelease];
+		CLLocation *loc = [[CLLocation alloc] initWithLatitude:[latitude floatValue] longitude:[longitude floatValue]];
 		[array addObject:loc];
 	}
 	
@@ -252,11 +250,11 @@
     [super viewWillAppear:animated];
     
     Place* a = [[Place alloc] init];
-    a.title = @"Santurce";
+    a.titleAnnotation = @"Santurce";
     a.coordinate = CLLocationCoordinate2DMake(43.3282, -3.031509);
 
     Place* b = [[Place alloc] init];
-    b.title = @"Bilbao";
+    b.titleAnnotation = @"Bilbao";
     b.coordinate = CLLocationCoordinate2DMake(43.256963, -2.923441);
     
     self.source = a;
@@ -265,8 +263,6 @@
     [map addAnnotation:a];
     [map addAnnotation:b];
     
-    [a release];
-    [b release];
     
     [self calculateDirections];
 }

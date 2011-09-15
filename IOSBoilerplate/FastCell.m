@@ -60,11 +60,8 @@
 
 - (void)dealloc {
 	[backView removeFromSuperview];
-	[backView release];
     
 	[contentView removeFromSuperview];
-	[contentView release];
-	[super dealloc];
 }
 
 - (void)setFrame:(CGRect)f {

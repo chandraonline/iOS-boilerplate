@@ -32,8 +32,8 @@
 
 }
 
-@property (nonatomic, retain) UIView* backView;
-@property (nonatomic, retain) UIView* contentView;
+@property (nonatomic, strong) UIView* backView;
+@property (nonatomic, strong) UIView* contentView;
 
 
 - (void) drawContentView:(CGRect)r;

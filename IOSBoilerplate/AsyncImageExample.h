@@ -30,7 +30,7 @@
 
 @interface AsyncImageExample : BaseViewController
 
-@property (nonatomic, retain) IBOutlet UIImageView* imageView;
-@property (nonatomic, retain) NSURL* url;
+@property (nonatomic, strong) IBOutlet UIImageView* imageView;
+@property (nonatomic, strong) NSURL* url;
 
 @end

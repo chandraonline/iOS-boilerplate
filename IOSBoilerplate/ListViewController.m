@@ -58,7 +58,6 @@
 		view.delegate = self;
 		[self.table addSubview:view];
 		_refreshHeaderView = view;
-		[view release];
 		
 	}
 	
@@ -133,9 +132,7 @@
 }
 
 - (void)dealloc {
-    [table release];
 	_refreshHeaderView = nil;
-    [super dealloc];
 }
 
 @end

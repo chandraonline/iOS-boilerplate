@@ -96,15 +96,13 @@
 		NSNumber* lat = [coordinates objectAtIndex:1];
 		
 		Place* place = [[Place alloc] init];
-		place.title = address;
+		place.titleAnnotation = address;
 		CLLocationCoordinate2D c = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
 		place.coordinate = c;
 		[sug addObject:place];
-		[place release];
 	}
 	
 	self.suggestions = sug;
-    [sug release];
     
 	[self.searchDisplayController.searchResultsTableView reloadData];
 	loading = NO;
@@ -146,7 +144,7 @@
 	UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (cell == nil) 
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
 		cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 		cell.textLabel.numberOfLines = 0;
 		cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
@@ -192,10 +190,5 @@
     return YES;
 }
 
-- (void)dealloc {
-    [suggestions release];
-    [label release];
-    [super dealloc];
-}
 
 @end

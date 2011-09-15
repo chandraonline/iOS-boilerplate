@@ -30,8 +30,8 @@
 
 @interface AutocompleteLocationExample : BaseViewController
 
-@property (nonatomic, retain) NSMutableArray* suggestions;
-@property (nonatomic, retain) IBOutlet UILabel* label;
+@property (nonatomic, strong) NSMutableArray* suggestions;
+@property (nonatomic, strong) IBOutlet UILabel* label;
 @property (assign) BOOL dirty;
 @property (assign) BOOL loading;
 

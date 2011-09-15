@@ -66,7 +66,6 @@
 	for (ASIHTTPRequest* r in toremove) {
 		[requests removeObject:r];
 	}
-	[toremove release];
 }
 
 - (void) cancelRequests {
@@ -79,17 +78,14 @@
 
 - (void) refreshCellsWithImage:(UIImage*)image fromURL:(NSURL*)url inTable:(UITableView*)tableView {
     NSArray *cells = [tableView visibleCells];
-    [cells retain];
     SEL selector = @selector(imageLoaded:withURL:);
     for (int i = 0; i < [cells count]; i++) {
-		UITableViewCell* c = [[cells objectAtIndex: i] retain];
+		UITableViewCell* c = [cells objectAtIndex: i];
         if ([c respondsToSelector:selector]) {
             [c performSelector:selector withObject:image withObject:url];
         }
-        [c release];
 		c = nil;
     }
-    [cells release];
 }
 
 #pragma mark -
@@ -108,9 +104,7 @@
 
 - (void)dealloc {
 	[self cancelRequests];
-	[requests release];
 	
-    [super dealloc];
 }
 
 

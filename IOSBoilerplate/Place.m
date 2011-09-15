@@ -31,8 +31,8 @@
 @implementation Place
 
 @synthesize coordinate;
-@synthesize title;
-@synthesize subtitle;
+@synthesize titleAnnotation;
+@synthesize subtitleAnnotation;
 
 - (id)init
 {
@@ -44,10 +44,13 @@
     return self;
 }
 
-- (void)dealloc {
-    [title release];
-    [subtitle release];
-    [super dealloc];
+
+- (NSString *) title {
+	return titleAnnotation;
+}
+
+- (NSString *) subtitle {
+	return subtitleAnnotation;
 }
 
 @end

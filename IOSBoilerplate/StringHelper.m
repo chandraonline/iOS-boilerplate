@@ -68,13 +68,13 @@
 
 - (NSString *)urlEncode
 {
-	NSString* encodedString = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+	NSString* encodedString = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                   NULL,
-                                                                                  (CFStringRef) self,
+                                                                                  (__bridge CFStringRef) self,
                                                                                   NULL,
                                                                                   (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                   kCFStringEncodingUTF8 );
-	return [encodedString autorelease];
+	return encodedString;
 }
 
 - (NSString *)sha1 {

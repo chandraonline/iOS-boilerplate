@@ -73,15 +73,10 @@ static UIFont* bold22 = nil;
 {
 	if(self == [SwipeableCell class])
 	{
-		bold22 = [[UIFont boldSystemFontOfSize:22] retain];
+		bold22 = [UIFont boldSystemFontOfSize:22];
 	}
 }
 
-- (void)dealloc {
-    [info release];
-    
-    [super dealloc];
-}
 
 - (void) drawContentView:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();

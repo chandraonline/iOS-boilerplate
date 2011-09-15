@@ -34,7 +34,7 @@
     
 }
 
-@property (nonatomic, retain) NSDictionary* info;
+@property (nonatomic, strong) NSDictionary* info;
 
 - (void) updateCellInfo:(NSDictionary*)_info;
 

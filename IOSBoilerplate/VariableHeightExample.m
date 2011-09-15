@@ -73,7 +73,7 @@
     
     VariableHeightCell *cell = (VariableHeightCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[VariableHeightCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[VariableHeightCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     NSDictionary* obj = [results objectAtIndex:indexPath.row];
@@ -134,11 +134,5 @@
 	return YES;
 }
 
-- (void)dealloc {
-    [table release];
-    [results release];
-    
-    [super dealloc];
-}
 
 @end
